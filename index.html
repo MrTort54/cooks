@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            flex-direction: row;
+        }
+
+        .wrap {
+            width: 60%;
+            height: 100vh;
+            background-image: url(sup-eda-fon.jpg);
+            background-size: cover;
+            
+        }
+        .desk{
+            width: 40%;
+            height: 100vh;
+            background-image: url(tekstury-fon-derevo-doski.jpg);
+            background-size: 1300px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+
+        }
+        .list{
+            width: 80%;
+            height: 80vh;
+            background-image: url(old_paper.jpg);
+            background-size: cover;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: left;
+            
+        }
+        .black{
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(37, 23, 14, 0.555);
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            align-items: center;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px); 
+        }
+
+        .place {
+            width: 500px;
+            height: 500px;
+            background-image: url(tekstury-fon-derevo-doski.jpg);
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: 1s;
+            position: relative;
+            left: -325px;
+            box-shadow: 0 0 100px rgb(56, 30, 13);
+            background-size: cover;
+        }
+
+        .next{
+            width: 140px;
+            height: 80px;
+            border: 5px double rgb(161, 115, 101);
+            border-radius: 20px;
+            background-color: rgb(231, 207, 179);
+          
+            transition: 0.2s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Bebas Neue', cursive;
+            font-size: 30px;
+            color:rgb(161, 115, 101);
+            cursor: pointer;
+
+            
+
+        }
+        .next:hover{
+            width: 160px;
+            height: 100px;
+            transition: 0.2s;
+            margin-top: -20px;
+            font-size: 40px;
+
+        }
+
+        .row {
+            width: 100%;
+            height: 20%;
+            /*            background-color::; gray;*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .row_center {
+            width: 100%;
+            height: 20%;
+            /*            background-color: gray;*/
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .row_center_seredina {
+            width: 100%;
+            height: 20%;
+            /*            background-color: gray;*/
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .item {
+            width: 120px;
+            height: 120px;
+            
+            border-radius: 50%;
+            transition: 1s;
+          
+        }
+
+        .itemT {
+            position: relative;
+            top: -50px;
+            background-image: url(432339.png);
+            background-size: cover;
+        }
+
+        .itemLT {
+            position: relative;
+            top: -70px;
+            left: 5%;
+            background-image: url(4727368.png);
+            background-size: cover;
+        }
+
+        .itemRT {
+            position: relative;
+            top: -70px;
+            left: -5%;
+            background-image: url(4727337.png);
+            background-size: cover;
+        }
+        .itemL {
+            position: relative;
+            left: -50px;
+            background-image: url(4727348.png);
+            background-size: cover;
+        }
+
+        .itemR {
+            position: relative;
+            left: 50px;
+            background-image: url(894887.png);
+            background-size: cover;
+            width: 150px;
+            height: 150px;
+        }
+        .itemLB {
+            position: relative;
+            top: 70px;
+            left: 5%;
+            background-image: url(4931945.png);
+            background-size: cover;
+        }
+
+        .itemRB {
+            position: relative;
+            top: 70px;
+            left: -5%;
+            background-image: url(4727322.png);
+            background-size: cover;
+        }
+
+        .itemB {
+            position: relative;
+            top: 50px;
+            background-image: url(676797.png);
+            background-size: cover;
+            
+        }
+
+        /*
+        .place:hover{
+            transform: rotate(90deg);
+            transition: 1s;
+        }
+*/
+
+        /*
+        .item{
+            width: 150px;
+            height: 150px;
+            background-color: red;
+            border-radius: 50%;
+        }
+*/
+        .main {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+         
+            margin-right: 100px;
+            margin-top: 20px;
+        }
+        .mainLeft{
+
+            width: 20%;
+        }
+        .mainRight{
+
+            width: 60%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column
+        }
+        #dishDescr{
+            font-family: 'Amatic SC', cursive;
+            font-family: 'Bebas Neue', cursive;
+            color:  rgb(231, 207, 179);
+            font-size: 20px;
+            cursor:default;
+        }
+        h1{
+            font-family: 'Amatic SC', cursive;
+            font-family: 'Bebas Neue', cursive;
+            color:  rgb(161, 115, 101);
+            cursor:default;
+
+        }
+        p{
+            font-size: 30px;
+            color: rgb(41, 24, 8);
+            font-family: 'Amatic SC', cursive;
+            font-family: 'Bebas Neue', cursive;
+            cursor:default;
+        }
+        .front{
+            font-family: 'Amatic SC', cursive;
+            font-family: 'Bebas Neue', cursive;
+            color:  rgb(70, 45, 37);
+            cursor:default;
+            text-align: center;
+            font-size: 34px;
+            
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="wrap" id="wrap">
+    <div class="black">
+        <div class="main">
+            <div class="mainLeft">
+                <div class="place" id="place">
+                    <div class="row">
+                        <div class="item itemT" id="items1"></div>
+                    </div>
+                    <div class="row_center_seredina">
+                        <div class="item itemLT" id="items2"></div>
+                        <div class="item itemRT" id="items3"></div>
+                    </div>
+                    <div class="row_center">
+                        <div class="item itemL" id="items4"></div>
+                        <div class="item itemR" id="items5"></div>
+                    </div>
+                    <div class="row_center_seredina">
+                        <div class="item itemLB" id="items6"></div>
+                        <div class="item itemRB" id="items7"></div>
+                    </div>
+                    <div class="row">
+                        <div class="item itemB" id="items8"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="mainRight">
+                <h1 id="dishName">Tomato soup</h1>
+                <p id="dishDescr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, architecto veniam. Labore fuga magni voluptate odio sed maiores, consequatur laborum.</p>
+            </div>
+        </div>
+
+         <div class="next" id="next">Next</div>
+            
+   
+        </div>
+    </div>
+    <div class="desk">
+        <div class="list">
+            <h2 class="front" id="front">Tomato soup</h2>
+
+            <p>...............................................................................
+                 <br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum soluta molestiae praesentium, nam laboriosam consequuntur alias quas velit voluptatibus obcaecati.
+                ...............................................................................
+                <br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro dignissimos velit provident saepe voluptas, veniam alias.
+                ...............................................................................
+                <br>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim dignissimos tempore minus.
+            </p>
+        </div>
+        
+
+    </div>
+    <script>
+        let angle = 0;
+        let click = 0;
+
+        next.onclick = function() {
+            angle = angle + 45;
+            place.style.transform = 'rotate(' + angle + 'deg)';
+            
+            
+            if(click==0){
+                dishName.innerText = 'Fried eggs';
+                front.innerText = 'Fried eggs';
+                wrap.style.backgroundImage = 'url(egg.jpg)';
+                dishDescr.innerText = 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit commodi similique atque recusandae, ducimus voluptas, nisi maxime temporibus cum alias officiis, distinctio necessitatibus doloremque? Repellat odit amet, repellendus fuga enim animi porro sint magni nemo provident facere culpa eum, eligendi, iure quibusdam laborum similique debitis!';
+                click = 1;
+                items3.style.width = "150px"
+                items3.style.height = "150px"
+                items1.style.width = "120px"
+                items1.style.height = "120px"
+                items2.style.width = "120px"
+                items2.style.height = "120px"
+                items4.style.width = "120px"
+                items4.style.height = "120px"
+                items6.style.width = "120px"
+                items6.style.height = "120px"
+                items8.style.width = "120px"
+                items8.style.height = "120px"
+                items7.style.width = "120px"
+                items7.style.height = "120px"
+                items5.style.width = "120px"
+                items5.style.height = "120px"
+
+               
+            }else if(click == 1){
+                  dishName.innerText = 'Pizza';
+                  front.innerText = 'Pizza';
+                  wrap.style.backgroundImage = 'url(4.jpg)';
+                  wrap.style.baground
+                dishDescr.innerText = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda eum quisquam, inventore nihil sed iste quam necessitatibus minus deleniti quia suscipit provident tenetur. Mollitia qui quae vero unde et optio quas, debitis expedita veniam molestiae repellat odio earum enim id.';
+                click = 2;
+                items1.style.width = "150px"
+                items1.style.height = "150px"
+                items3.style.width = "120px"
+                items3.style.height = "120px"
+              
+                items2.style.width = "120px"
+                items2.style.height = "120px"
+                items4.style.width = "120px"
+                items4.style.height = "120px"
+                items6.style.width = "120px"
+                items6.style.height = "120px"
+                items8.style.width = "120px"
+                items8.style.height = "120px"
+                items7.style.width = "120px"
+                items7.style.height = "120px"
+                items5.style.width = "120px"
+                items5.style.height = "120px"
+
+              
+               
+            }else if(click == 2){
+                  dishName.innerText = 'Pasta';
+                  front.innerText = 'Pasta';
+                  wrap.style.backgroundImage = 'url(Spagetti.jpg)';
+                dishDescr.innerText = 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis non explicabo ut ducimus eius ea distinctio, dolore quas maxime veniam voluptatum repellendus ratione modi eos consequatur, possimus sapiente. Obcaecati, repellat.';
+                click = 3;
+                items2.style.width = "150px"
+                items2.style.height = "150px"
+                items3.style.width = "120px"
+                items3.style.height = "120px"
+                items1.style.width = "120px"
+                items1.style.height = "120px"
+               
+                items4.style.width = "120px"
+                items4.style.height = "120px"
+                items6.style.width = "120px"
+                items6.style.height = "120px"
+                items8.style.width = "120px"
+                items8.style.height = "120px"
+                items7.style.width = "120px"
+                items7.style.height = "120px"
+                items5.style.width = "120px"
+                items5.style.height = "120px"
+            }else if(click == 3){
+                click = 4;
+                 dishName.innerText = 'Shrimp';
+                 front.innerText = 'Shrimp';
+                 wrap.style.backgroundImage = 'url(kr.jpg)';
+                dishDescr.innerText = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis optio quisquam ratione cupiditate esse eveniet perspiciatis excepturi mollitia, ducimus neque voluptatem deserunt, at laborum, velit sequi eligendi voluptatibus ut facere sed autem nostrum illum maiores quasi.';
+                items4.style.width = "150px"
+                items4.style.height = "150px"
+                items3.style.width = "120px"
+                items3.style.height = "120px"
+                items1.style.width = "120px"
+                items1.style.height = "120px"
+                items2.style.width = "120px"
+                items2.style.height = "120px"
+              
+                items6.style.width = "120px"
+                items6.style.height = "120px"
+                items8.style.width = "120px"
+                items8.style.height = "120px"
+                items7.style.width = "120px"
+                items7.style.height = "120px"
+                items5.style.width = "120px"
+                items5.style.height = "120px"
+            }else if(click == 4){
+                  dishName.innerText = 'Sushi';
+                  front.innerText = 'Sushi';
+                  wrap.style.backgroundImage = 'url(s.jpg)';
+                dishDescr.innerText = 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas voluptatum eaque quae, nobis excepturi dicta possimus facere. Quaerat quam vero libero deleniti similique atque harum! Architecto at totam animi exercitationem explicabo nesciunt aperiam doloribus odio fugiat veritatis quia eum, earum quis rerum sequi velit laboriosam sapiente unde modi dolorem labore? Mollitia, ducimus.';
+                click = 5;
+                items6.style.width = "150px"
+                items6.style.height = "150px"
+                items3.style.width = "120px"
+                items3.style.height = "120px"
+                items1.style.width = "120px"
+                items1.style.height = "120px"
+                items2.style.width = "120px"
+                items2.style.height = "120px"
+                items4.style.width = "120px"
+                items4.style.height = "120px"
+            
+                items8.style.width = "120px"
+                items8.style.height = "120px"
+                items7.style.width = "120px"
+                items7.style.height = "120px"
+                items5.style.width = "120px"
+                items5.style.height = "120px"
+            }else if(click == 5){
+                  dishName.innerText = 'Steak';
+                  front.innerText = 'Steak';
+                  wrap.style.backgroundImage = 'url(str.jpg)';
+                dishDescr.innerText = 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis non explicabo ut ducimus eius ea distinctio, dolore quas maxime veniam voluptatum repellendus ratione modi eos consequatur, possimus sapiente. Obcaecati, repellat.';
+                click = 6;
+                items8.style.width = "150px"
+                items8.style.height = "150px"
+                items3.style.width = "120px"
+                items3.style.height = "120px"
+                items1.style.width = "120px"
+                items1.style.height = "120px"
+                items2.style.width = "120px"
+                items2.style.height = "120px"
+                items4.style.width = "120px"
+                items4.style.height = "120px"
+                items6.style.width = "120px"
+                items6.style.height = "120px"
+              
+                items7.style.width = "120px"
+                items7.style.height = "120px"
+                items5.style.width = "120px"
+                items5.style.height = "120px"
+            }else if(click == 6){
+                click = 7;
+                 dishName.innerText = 'Tako';
+                 front.innerText = 'Tako';
+                 wrap.style.backgroundImage = 'url(tako.jfif)';
+                dishDescr.innerText = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda eum quisquam, inventore nihil sed iste quam necessitatibus minus deleniti quia suscipit provident tenetur. Mollitia qui quae vero unde et optio quas, debitis expedita veniam molestiae repellat odio earum enim id.';
+                items7.style.width = "150px"
+                items7.style.height = "150px"
+                items3.style.width = "120px"
+                items3.style.height = "120px"
+                items1.style.width = "120px"
+                items1.style.height = "120px"
+                items2.style.width = "120px"
+                items2.style.height = "120px"
+                items4.style.width = "120px"
+                items4.style.height = "120px"
+                items6.style.width = "120px"
+                items6.style.height = "120px"
+                items8.style.width = "120px"
+                items8.style.height = "120px"
+             
+                items5.style.width = "120px"
+                items5.style.height = "120px"
+            }else if(click == 7){
+                  dishName.innerText = 'Tomato soup';
+                  front.innerText = 'Tomato soup';
+                  wrap.style.backgroundImage = 'url(sup-eda-fon.jpg)';
+                dishDescr.innerText = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, architecto veniam. Labore fuga magni voluptate odio sed maiores, consequatur laborum.';
+                click = 0;
+                items5.style.width = "150px"
+                items5.style.height = "150px"
+                items3.style.width = "120px"
+                items3.style.height = "120px"
+                items1.style.width = "120px"
+                items1.style.height = "120px"
+                items2.style.width = "120px"
+                items2.style.height = "120px"
+                items4.style.width = "120px"
+                items4.style.height = "120px"
+                items6.style.width = "120px"
+                items6.style.height = "120px"
+                items8.style.width = "120px"
+                items8.style.height = "120px"
+                items7.style.width = "120px"
+                items7.style.height = "120px"
+              
+            }
+            
+        }
+      
+    </script>
+</body></html>
